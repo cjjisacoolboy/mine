@@ -32,10 +32,12 @@ public class CheckDupServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		System.out.println(password);
 		String message = "登录失败";
+		String message1 ="这是我修改之后的分支";
 		//进行重名验证
 		//连接数据库进行验证
 		if ("admin".equals(account)) {
 			message = "登录成功";
+			
 			request.getSession().setAttribute("account", account);
 			
 		}
